@@ -1,0 +1,44 @@
+<div class="page-header">
+  <h3 class="page-title">
+    Register
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">Containers</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Register</li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+
+  <div class="col-md-8 grid-margin stretch-card mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Register</h4>
+        <p class="card-description">
+          Register New Container In The System
+        </p>
+        <form method="POST" class="forms-sample" action="/">
+          <div class="form-group">
+            <label for="name">container name</label>
+            <input name="name"  type="text" class="form-control" id="name" placeholder="name">
+          </div>
+          <div class="form-group">
+            <label for="containerRef">Container Reference</label>
+            <input name="containerRef"type="text" class="form-control" id="containerRef" placeholder="Container Reference">
+          </div>
+          <div class="form-group">
+            <label for="departureTime">departure time</label>
+            <input name="depart_time"type="date" class="form-control" id="departureTime" placeholder="cargo ship departure time">
+          </div>
+          <div class="form-group">
+            <label for="arrival_time">estimated arrival time</label>
+            <input name="arrival_time"type="date" class="form-control" id="arrivalTime" placeholder="cargo ship estimated arrival time">
+          </div>
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button class="btn btn-light">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

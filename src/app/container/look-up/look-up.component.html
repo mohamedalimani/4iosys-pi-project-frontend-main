@@ -1,0 +1,62 @@
+<div class="page-header">
+  <h3 class="page-title">
+    Look Up
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">Containers</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Look Up</li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-sm-flex align-items-center mb-4">
+          <h4 class="card-title mb-sm-0">All Registered Containers</h4>
+        </div>
+        <div class="table-responsive border rounded p-1">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="font-weight-bold">name </th>
+                <th class="font-weight-bold">Sensors state</th>
+                <th class="font-weight-bold">Departure time </th>
+                <th class="font-weight-bold">Estimated arrival time</th>
+                <th class="font-weight-bold">Status</th>
+                <th class="font-weight-bold"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor="let cont of cont_available,let i=index">
+                <tr>
+                  <td class="font-weight-bold">{{cont.name}}</td>
+                  <td class="font-weight-bold">{{cont.sensors_state}}</td>
+                  <td class="font-weight-bold">{{cont.depart_time}}</td>
+                  <td class="font-weight-bold">{{cont.arrival_time}}</td>
+                  <td [ngStyle]="{'background-color': cont.container_state}"></td>
+                  <td class="font-weight-bold"></td>
+                </tr>
+              </ng-container> 
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex mt-4 flex-wrap align-items-center">
+          <p class="text-muted mb-sm-0">Showing 1 to 10 of 57 entries</p>
+          <nav class="ml-auto">
+            <ul class="pagination separated pagination-info mb-sm-0">
+              <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a></li>
+              <li class="page-item active"><a href="#" class="page-link">1</a></li>
+              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item"><a href="#" class="page-link">3</a></li>
+              <li class="page-item"><a href="#" class="page-link">4</a></li>
+              <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
